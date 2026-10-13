@@ -7,7 +7,8 @@ if (registrationForm) {
   const successMessage = document.querySelector("#registrationSuccess");
 
   function passwordsMatch() {
-    const matches = password.value.length > 0 && password.value === confirmPassword.value;
+    const matches =
+      password.value.length > 0 && password.value === confirmPassword.value;
     confirmPassword.setCustomValidity(matches ? "" : "Passwords must match.");
     confirmPassword.classList.toggle("is-valid", matches);
     confirmPassword.classList.toggle("is-invalid", !matches);
@@ -43,9 +44,11 @@ if (registrationForm) {
 
   registrationForm.addEventListener("reset", () => {
     window.setTimeout(() => {
-      registrationForm.querySelectorAll(".is-valid, .is-invalid").forEach((field) => {
-        field.classList.remove("is-valid", "is-invalid");
-      });
+      registrationForm
+        .querySelectorAll(".is-valid, .is-invalid")
+        .forEach((field) => {
+          field.classList.remove("is-valid", "is-invalid");
+        });
       confirmPassword.setCustomValidity("");
       successMessage.classList.remove("show");
     }, 0);

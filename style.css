@@ -11,7 +11,7 @@ body {
 }
 
 .navbar-brand {
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
 }
 
 main {
@@ -22,14 +22,14 @@ main {
   color: #fff;
   background: linear-gradient(120deg, #25264d, #635bff);
   border-radius: 1.25rem;
-  box-shadow: 0 1rem 3rem rgba(37, 38, 77, .16);
+  box-shadow: 0 1rem 3rem rgba(37, 38, 77, 0.16);
 }
 
 .eyebrow {
   color: #aeb4ff;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -39,7 +39,7 @@ main {
   background: #fff;
   border: 1px solid #e7eaf2;
   border-radius: 1rem;
-  box-shadow: 0 .5rem 1.5rem rgba(23, 32, 51, .06);
+  box-shadow: 0 0.5rem 1.5rem rgba(23, 32, 51, 0.06);
 }
 
 .task-card {
@@ -49,14 +49,17 @@ main {
   text-decoration: none;
   background: #fff;
   border: 1px solid #e7eaf2;
-  border-radius: .9rem;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  border-radius: 0.9rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .task-card:hover,
 .task-card:focus-visible {
   border-color: var(--accent);
-  box-shadow: 0 .75rem 1.5rem rgba(99, 91, 255, .13);
+  box-shadow: 0 0.75rem 1.5rem rgba(99, 91, 255, 0.13);
   transform: translateY(-3px);
 }
 
@@ -64,9 +67,9 @@ main {
   display: inline-block;
   margin-bottom: 1rem;
   color: var(--accent);
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 .focus-ring:focus,
@@ -75,7 +78,7 @@ main {
 .form-check-input:focus,
 button:focus-visible,
 a:focus-visible {
-  box-shadow: 0 0 0 .25rem rgba(99, 91, 255, .25);
+  box-shadow: 0 0 0 0.25rem rgba(99, 91, 255, 0.25);
 }
 
 .page-intro {

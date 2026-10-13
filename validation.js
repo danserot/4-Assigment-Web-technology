@@ -4,16 +4,17 @@ if (contactForm) {
   const fields = {
     name: {
       element: document.querySelector("#name"),
-      isValid: (value) => value.trim().length >= 2 && value.trim().length <= 60
+      isValid: (value) => value.trim().length >= 2 && value.trim().length <= 60,
     },
     email: {
       element: document.querySelector("#email"),
-      isValid: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())
+      isValid: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
     },
     message: {
       element: document.querySelector("#message"),
-      isValid: (value) => value.trim().length >= 10 && value.trim().length <= 500
-    }
+      isValid: (value) =>
+        value.trim().length >= 10 && value.trim().length <= 500,
+    },
   };
   const successMessage = document.querySelector("#successMessage");
 
@@ -30,7 +31,9 @@ if (contactForm) {
     successMessage.classList.toggle("show", formIsValid);
     if (!formIsValid) {
       successMessage.classList.remove("show");
-      const firstInvalid = Object.values(fields).find((field) => field.element.classList.contains("is-invalid"));
+      const firstInvalid = Object.values(fields).find((field) =>
+        field.element.classList.contains("is-invalid"),
+      );
       firstInvalid.element.focus();
     }
   });
