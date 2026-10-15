@@ -29,6 +29,14 @@ if (registrationForm) {
   password.addEventListener("input", passwordsMatch);
   confirmPassword.addEventListener("input", passwordsMatch);
 
+  registrationForm.addEventListener("input", () => {
+    successMessage.classList.remove("show");
+  });
+
+  registrationForm.addEventListener("change", () => {
+    successMessage.classList.remove("show");
+  });
+
   registrationForm.addEventListener("submit", (event) => {
     passwordsMatch();
     markNativeFields();

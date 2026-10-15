@@ -27,7 +27,8 @@ if (contactForm) {
 
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    const formIsValid = Object.values(fields).every(updateField);
+    const results = Object.values(fields).map(updateField);
+    const formIsValid = results.every(Boolean);
     successMessage.classList.toggle("show", formIsValid);
     if (!formIsValid) {
       successMessage.classList.remove("show");
